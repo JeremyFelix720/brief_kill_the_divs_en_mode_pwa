@@ -2,7 +2,7 @@ import Target from "../components/Target";
 import Score from "../components/Score";
 import { useEffect, useState } from "react";
 
-const target_sound = new Audio("../../public/assets/sounds/sonic_ring.mp3");
+const target_sound = new Audio("/assets/sounds/sonic_ring.mp3");
 
 export default function Game() {
 
