@@ -31,9 +31,28 @@ export default function Score(props: {numberOfClick: number, gameStatus: boolean
       // Arrete le decompte.
       clearInterval(intervalId!); // Le "!" veut dire au compilateur que je suis sûr que cette variable n'est pas null ou undefined.
 
-      // Au moment de changer de page, le state ENVOIT à la page ciblée End "finalTimeElapsed" (le temps final écoulé).
-      navigate("/end", { state: { totalTimeElapsed: timeElapsed } });
+      // Création d'une notification
+      const notification_icon = "../../public/icons/icon-144x144.png";
+      const notification_text = "Votre temps est de : " + timeElapsed + " milisecondes";
 
+      // Gestion de l'autorisation de la notification
+      Notification.requestPermission().then((permission) => {
+        // Si l'utilisateur accepte, créons une notification
+        if (permission === "granted") {
+          new Notification("Partie terminée !", {
+            body: notification_text,
+            icon: notification_icon,
+          });
+          setTimeout(() => {
+            // Au moment de changer de page, le state ENVOIT à la page ciblée End "finalTimeElapsed" (le temps final écoulé).
+            navigate("/end", { state: { totalTimeElapsed: timeElapsed } });
+          }, 4000)
+        }
+        else {
+          // Au moment de changer de page, le state ENVOIT à la page ciblée End "finalTimeElapsed" (le temps final écoulé).
+          navigate("/end", { state: { totalTimeElapsed: timeElapsed } });
+        }
+      });
     }
 
   }, [props.gameStatus])

@@ -25,15 +25,15 @@ On affichera alors un écran de fin de partie avec un bouton "Rejouer" qui perme
 6. en dessous de ce compteur, on affiche un chrono croissant en secondes (ex: 6.867 sec) [OK]
 7. l'écran de jeu a un fond noir [OK]
 8. lorsque l'on clique sur la div, elle disparait et on en fait apparaitre une nouvelle à une position aléatoire [OK]
-9. quand on a cliqué sur 10 divs, on affiche un écran de fin de partie avec un bouton "Rejouer" qui permet de relancer une partie et le temps qu'on a mis pour finir la partie
+9. quand on a cliqué sur 10 divs, on affiche un écran de fin de partie avec un bouton "Rejouer" qui permet de relancer une partie et le temps qu'on a mis pour finir la partie [OK]
 
 ### 2. Pimp my game
 
-Choisissez des améliorations à apporter au jeu dans l'order que vous voulez :
+Choisissez des améliorations à apporter au jeu dans l'ordre que vous voulez :
 
-- Ajouter un son quand on clique sur une div (Utiliser l'API Web Audio)
+- Ajouter un son quand on clique sur une div (Utiliser l'API Web Audio) [OK]
 - Ajouter des vibrations quand on clique sur une div (Utiliser l'API Vibration)
-- Ajouter une notification quand on clique sur la dernière div avec affichage du temps total (Utiliser l'API Notification)
+- Ajouter une notification quand on clique sur la dernière div avec affichage du temps total (Utiliser l'API Notification) [OK]
 - Ajouter un bouton "Pause" qui met le jeu en pause (Utiliser l'API Page Visibility)
 - Utiliser l'api suivante et la geolocalisation pour afficher le pays de l'utilisateur :
 https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=37.42159&longitude=-122.0837&localityLanguage=en
