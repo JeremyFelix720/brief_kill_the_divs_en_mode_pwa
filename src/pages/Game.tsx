@@ -1,14 +1,19 @@
 import Target from "../components/Target"
 import Score from "../components/Score"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 export default function Game() {
 
   const [nbClick, setNbClick] = useState(0)
+  const [gameStatus, setGameStatus] = useState(true)
+
   const [topPosition, setTopPosition] = useState("0px")
   const [leftPosition, setLeftPosition] = useState("0px")
   
+  useEffect(()=>{
+    setGameStatus(true);
+  },[])
 
   function getRandomTopPosition() {
     return Math.floor(Math.random() * 100);
@@ -19,7 +24,13 @@ export default function Game() {
   }
 
   const handleClickTarget = () => {
-    setNbClick(nbClick + 1);
+
+    if(nbClick === 9) {
+      setGameStatus(false);
+      // setNbClick(0);
+    } else {
+      setNbClick(nbClick + 1);
+    }
 
     setTopPosition(getRandomTopPosition().toString() + "%");
     setLeftPosition(getRandomLeftPosition().toString() + "%");
@@ -29,7 +40,7 @@ export default function Game() {
     <>
       <header>
         <h1>Game</h1>
-        <Score numberOfClick={nbClick}/>
+        <Score numberOfClick={nbClick} gameStatus={gameStatus}/>
       </header>
       
       <div className="playground">
@@ -38,6 +49,6 @@ export default function Game() {
     </>
   )
 }
-// La page Game est le parent du composant Target
+// La page Game est le parent des composants Target et Score
 // Game RECOIT de son enfant Target l'info que l'élément a été cliqué.
-// Game ENVOIT à son enfant Target la nouvelle position top et left.
+// Game ENVOIT à son enfant Target les nouvelles positions top et left.
