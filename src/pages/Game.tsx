@@ -39,8 +39,8 @@ export default function Game() {
   return (
     <>
       <header>
-        <h1>Game</h1>
-        <Score numberOfClick={nbClick} gameStatus={gameStatus}/>
+        <h1>Kill the Divs !</h1>
+        <Score numberOfClick={nbClick} gameStatus={gameStatus} />
       </header>
       
       <div className="playground">

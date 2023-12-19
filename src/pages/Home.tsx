@@ -8,7 +8,9 @@ export default function Home() {
 
   return (
     <>
-      <h1>Home</h1>
+      <header>
+        <h1>Démarrez une partie !</h1>
+      </header>
       <Button text={buttonText} />
     </>
   )

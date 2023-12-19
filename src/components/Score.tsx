@@ -30,8 +30,10 @@ export default function Score(props: {numberOfClick: number, gameStatus: boolean
 
       // Arrete le decompte.
       clearInterval(intervalId!); // Le "!" veut dire au compilateur que je suis sûr que cette variable n'est pas null ou undefined.
-      
-      navigate("/end");
+
+      // Au moment de changer de page, le state ENVOIT à la page ciblée End "finalTimeElapsed" (le temps final écoulé).
+      navigate("/end", { state: { totalTimeElapsed: timeElapsed } });
+
     }
 
   }, [props.gameStatus])
@@ -43,7 +45,7 @@ export default function Score(props: {numberOfClick: number, gameStatus: boolean
           Nombre de clic(s) : {props.numberOfClick}/10 
         </div>
         <div className="time_elapsed">
-          Temps écoulé : {timeElapsed} seconde(s)
+          Temps écoulé : {timeElapsed} miliseconde(s)
         </div>
       </div>
     </>

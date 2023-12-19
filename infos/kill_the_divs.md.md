@@ -22,9 +22,9 @@ On affichera alors un écran de fin de partie avec un bouton "Rejouer" qui perme
 3. Dans l'écran de jeu, on affiche une div ronde (Boite de 50px de côté, bordure arrondie, fond blanc) à une position aléatoire sur l'écran [OK]
 4. l'écran de jeu prend 100% de la hauteur et de la largeur de l'écran [OK]
 5. on affiche un compteur de divs cliquées en haut à droite de l'écran [OK]
-6. en dessous de ce compteur, on affiche un chrono croissant en secondes (ex: 6.867 sec)
+6. en dessous de ce compteur, on affiche un chrono croissant en secondes (ex: 6.867 sec) [OK]
 7. l'écran de jeu a un fond noir [OK]
-8. lorsque l'on clique sur la div, elle disparait et on en fait apparaitre une nouvelle à une position aléatoire
+8. lorsque l'on clique sur la div, elle disparait et on en fait apparaitre une nouvelle à une position aléatoire [OK]
 9. quand on a cliqué sur 10 divs, on affiche un écran de fin de partie avec un bouton "Rejouer" qui permet de relancer une partie et le temps qu'on a mis pour finir la partie
 
 ### 2. Pimp my game
