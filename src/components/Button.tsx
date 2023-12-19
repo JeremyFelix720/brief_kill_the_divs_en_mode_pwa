@@ -7,7 +7,7 @@ export default function Button(props: {text: string}) {
   const navigate = useNavigate();
 
   const handleClick = useCallback(() => {
-    navigate("/game")
+    navigate("/game");
   }, [])
 
 

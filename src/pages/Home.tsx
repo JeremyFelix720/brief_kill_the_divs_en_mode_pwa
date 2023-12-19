@@ -1,10 +1,10 @@
 
-import { useState } from "react";
-import Button from "../components/Button"
+import Button from "../components/Button";
 
 export default function Home() {
   
-  const [buttonText, setButtonText] = useState("Start");
+  // const [buttonText, setButtonText] = useState("Start");
+  const buttonText = "Start" as string;
 
   return (
     <>
