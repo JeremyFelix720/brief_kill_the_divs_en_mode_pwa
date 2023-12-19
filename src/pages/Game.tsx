@@ -1,19 +1,20 @@
-import Target from "../components/Target"
-import Score from "../components/Score"
+import Target from "../components/Target";
+import Score from "../components/Score";
 import { useEffect, useState } from "react";
 
+const target_sound = new Audio("../../public/assets/sounds/sonic_ring.mp3");
 
 export default function Game() {
 
-  const [nbClick, setNbClick] = useState(0)
-  const [gameStatus, setGameStatus] = useState(true)
+  const [nbClick, setNbClick] = useState(0);
+  const [gameStatus, setGameStatus] = useState(true);
 
-  const [topPosition, setTopPosition] = useState("0px")
-  const [leftPosition, setLeftPosition] = useState("0px")
+  const [topPosition, setTopPosition] = useState("0px");
+  const [leftPosition, setLeftPosition] = useState("0px");
   
   useEffect(()=>{
     setGameStatus(true);
-  },[])
+  }, [])
 
   function getRandomTopPosition() {
     return Math.floor(Math.random() * 100);
@@ -24,6 +25,9 @@ export default function Game() {
   }
 
   const handleClickTarget = () => {
+    target_sound.pause();
+    target_sound.currentTime = 0;  // Remise à zéro seconde de la bande son
+    target_sound.play();
 
     if(nbClick === 9) {
       setGameStatus(false);
