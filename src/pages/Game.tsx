@@ -31,7 +31,7 @@ export default function Game() {
 
     if(nbClick === 9) {
       setGameStatus(false);
-      // setNbClick(0);
+      setNbClick(nbClick + 1);
     } else {
       setNbClick(nbClick + 1);
     }

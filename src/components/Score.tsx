@@ -16,7 +16,8 @@ export default function Score(props: {numberOfClick: number, gameStatus: boolean
 
     setIntervalId(setInterval(() => {
       // Nombre de milisecondes écoulées depuis le début de la partie (état "timeElapsed").
-      setTimeElapsed(Date.now() - firstTimeRecord);
+      let delta = parseFloat((Date.now() - firstTimeRecord).toFixed(3));
+      setTimeElapsed(delta/1000);
     }, 120)) // Met à jour le temps écoulé toutes les 120 milisecondes.
 
   },[])
@@ -33,7 +34,7 @@ export default function Score(props: {numberOfClick: number, gameStatus: boolean
 
       // Création d'une notification
       const notification_icon = "../../public/icons/icon-144x144.png";
-      const notification_text = "Votre temps est de : " + timeElapsed + " milisecondes";
+      const notification_text = "Votre temps est de : " + timeElapsed + " secondes";
 
       // Gestion de l'autorisation de la notification
       Notification.requestPermission().then((permission) => {
@@ -64,7 +65,7 @@ export default function Score(props: {numberOfClick: number, gameStatus: boolean
           Nombre de clic(s) : {props.numberOfClick}/10 
         </div>
         <div className="time_elapsed">
-          Temps écoulé : {timeElapsed} miliseconde(s)
+          Temps écoulé : {timeElapsed} seconde(s)
         </div>
       </div>
     </>

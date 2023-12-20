@@ -18,7 +18,7 @@ export default function End() {
       <header>
         <h1>Résultat de la partie</h1>
       </header>
-      <h2>Temps total effectué : {totalElapsedTime} milisecondes.</h2>
+      <h2>Temps total effectué : {totalElapsedTime} secondes.</h2>
       <Button text={buttonText} />
     </>
   )
