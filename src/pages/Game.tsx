@@ -25,9 +25,17 @@ export default function Game() {
   }
 
   const handleClickTarget = () => {
+
+    // Gestion du buitage
     target_sound.pause();
     target_sound.currentTime = 0;  // Remise à zéro seconde de la bande son
     target_sound.play();
+
+    // Gestion de la vibration
+    if(window.navigator.vibrate){
+      window.navigator.vibrate(200); // Vibration de l'appareil pendant 200ms.
+      // window.navigator.vibrate([200, 100, 200]); // Vibration de l'appareil pendant 200ms, puis pause de 100ms, puis nouvelle vibration pendant 200ms.
+    }
 
     if(nbClick === 9) {
       setGameStatus(false);
