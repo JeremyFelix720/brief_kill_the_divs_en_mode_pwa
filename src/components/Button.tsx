@@ -13,7 +13,7 @@ export default function Button(props: {text: string}) {
 
   return (
     <>
-      <button type="button" onClick={handleClick}>{props.text}</button>
+      <button type="button" role="button" onClick={handleClick}>{props.text}</button>
     </>
   )
 }

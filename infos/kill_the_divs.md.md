@@ -32,7 +32,7 @@ On affichera alors un écran de fin de partie avec un bouton "Rejouer" qui perme
 Choisissez des améliorations à apporter au jeu dans l'ordre que vous voulez :
 
 - Ajouter un son quand on clique sur une div (Utiliser l'API Web Audio) [OK]
-- Ajouter des vibrations quand on clique sur une div (Utiliser l'API Vibration)
+- Ajouter des vibrations quand on clique sur une div (Utiliser l'API Vibration) [OK]
 - Ajouter une notification quand on clique sur la dernière div avec affichage du temps total (Utiliser l'API Notification) [OK]
 - Ajouter un bouton "Pause" qui met le jeu en pause (Utiliser l'API Page Visibility)
 - Utiliser l'api suivante et la geolocalisation pour afficher le pays de l'utilisateur :

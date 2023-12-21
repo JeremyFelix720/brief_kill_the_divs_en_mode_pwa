@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 // La props "numberOfClick" de l'enfant RECOIENT du parent Game le nouveau nombre de clics.
-export default function Score(props: {numberOfClick: number, gameStatus: boolean}) {
+export default function Score(props: {maxClicks:number, numberOfClick: number, gameStatus: boolean}) {
 
   // const [firstTimeRecord, setFirstTimeRecord] = useState(Date.now());
   const firstTimeRecord = Date.now();
@@ -61,8 +61,8 @@ export default function Score(props: {numberOfClick: number, gameStatus: boolean
   return (
     <>
       <div className="score">
-        <div className="click">
-          Nombre de clic(s) : {props.numberOfClick}/10 
+        <div className="clicks">
+          Nombre de clic(s) : {props.numberOfClick}/{props.maxClicks}
         </div>
         <div className="time_elapsed">
           Temps écoulé : {timeElapsed} seconde(s)

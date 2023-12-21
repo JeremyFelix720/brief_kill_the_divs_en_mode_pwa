@@ -11,15 +11,18 @@ export default function End() {
 
   // Le texte du bouton est réinitialisé en "Restart".
   // const [buttonText, setButtonText] = useState("Restart");
-  const buttonText = "Restart";
+  const buttonText = "Recommencer";
 
   return (
     <>
       <header>
         <h1>Résultat de la partie</h1>
+        <h2>Temps total effectué : {totalElapsedTime} secondes.</h2>
       </header>
-      <h2>Temps total effectué : {totalElapsedTime} secondes.</h2>
-      <Button text={buttonText} />
+
+      <div className="playground">
+        <Button text={buttonText} />
+      </div>
     </>
   )
 }

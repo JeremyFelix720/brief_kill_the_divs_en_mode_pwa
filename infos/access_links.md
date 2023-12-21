@@ -14,4 +14,4 @@ Deployment :
 https://brief-kill-the-divs-en-mode-9edjm30ta-jeremyfelix720.vercel.app/game
 
 Domains :
-brief-kill-the-divs-en-mode-pwa.vercel.app
+https://brief-kill-the-divs-en-mode-pwa.vercel.app/

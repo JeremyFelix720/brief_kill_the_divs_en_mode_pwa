@@ -10,8 +10,8 @@ export default defineConfig({
       enabled: true
     },
     manifest: {
-      name: 'Kill the div',
-      short_name: 'Kill the div',
+      name: 'Kill the Divs',
+      short_name: 'Kill the Divs',
       theme_color: '#303030',
       icons: [
         {

@@ -12,6 +12,8 @@ export default function Game() {
   const [topPosition, setTopPosition] = useState("0px");
   const [leftPosition, setLeftPosition] = useState("0px");
   
+  const MAX_CLICKS = 10 as number;
+
   useEffect(()=>{
     setGameStatus(true);
   }, [])
@@ -37,7 +39,7 @@ export default function Game() {
       // window.navigator.vibrate([200, 100, 200]); // Vibration de l'appareil pendant 200ms, puis pause de 100ms, puis nouvelle vibration pendant 200ms.
     }
 
-    if(nbClick === 9) {
+    if(nbClick === MAX_CLICKS-1) {
       setGameStatus(false);
       setNbClick(nbClick + 1);
     } else {
@@ -52,7 +54,7 @@ export default function Game() {
     <>
       <header>
         <h1>Kill the Divs !</h1>
-        <Score numberOfClick={nbClick} gameStatus={gameStatus} />
+        <Score maxClicks={MAX_CLICKS} numberOfClick={nbClick} gameStatus={gameStatus} />
       </header>
       
       <div className="playground">
